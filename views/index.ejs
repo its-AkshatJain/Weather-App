@@ -1,0 +1,144 @@
+<!-- Will make it using react 
+will enable dark and light theme
+use grid and flex for styling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kanit:wght@500&family=Lora&display=swap" rel="stylesheet">
+
+</head>
+<body class="">
+    
+    <div class="top-searchbar">
+        <h1 class="top-heading"><img src="../Images/cloudy.png" alt="Weather App icon" height="30px"> Weather App</h1>
+        <form class="search" action="/submit" method="POST">
+            <select class="search-box" name="area" type="dropdown" required>
+                <option value="Select" selected>Select your state here</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal">Himachal</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Orissa">Orissa</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttaranchal">Uttaranchal</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+            <button class="search-button"><img src="../Images/search.png" alt="search" height="25px"></button>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <div class="temperature gradient-background display-box">
+            <img class="weather-image" src="<%= imageURL %>" alt="weather-image">
+
+            <h2><%= currentTemp %>°C</h2>
+            <hr>
+            <p><%= description %></p>
+            <div>
+                <% if(dayNight==="yes"){ %>
+                    <p>Day</p>
+                <% }else{ %>
+                    <p>Night</p>
+                <% } %>
+    
+                <span><%= location %></span>
+            </div>
+            
+            <div class="time">
+                <p><%= observationTime %></p>
+            </div>
+        </div>
+
+        <!-- Not available on free API plan -->
+        <!-- <div class="past-seven-days">
+            <h2>Past 7-Days</h2>
+            <div>Date-1</div>
+            <div>Date-2</div>
+            <div>Date-3</div>
+            <div>Date-4</div>
+            <div>Date-5</div>
+            <div>Date-6</div>
+            <div>Date-7</div>
+        </div> -->
+        <div class="top-right">
+            <div class="wind w-50 gradient-background display-box text-center">
+                <h2>Wind-Status</h2>
+                <img src="../Images/wind.png" alt="wind image" height="100px">
+                <h2><%= windSpeed %>km/h</h2>
+                <p><%= windDegree %>° <%= windDirection %> pole</p>
+                <!-- <div class="time">
+                    <p> observationTime %></p>
+                </div> -->
+            </div>
+    
+            <div class="uv-index w-50 gradient-background display-box text-center">
+                <h2>UV Index</h2>
+                <img src="../Images/uv-index.png" alt="UV-Index" height="100px">
+                <h2><%= uvIndex %></h2>
+            </div>
+        </div>
+        
+        <div class="additional-info gradient-background display-box">
+            <h2>Other Highlights</h2>
+            <div>
+                <h3>Pressure:</h3>
+                <span><%= Pressure %>MB(Millibar)</span>
+            </div>
+            <div>
+                <h3>Precipitation:</h3> 
+                <span><%= precipitation %>mm</span>
+            </div>
+            <div>
+                <h3>Cloud Cover:</h3> 
+                <span><%= cloudCover %></span>
+            </div>
+        </div>
+
+        <div class="bottom-right">
+            <div class="feels-like w-50 gradient-background display-box text-center">
+                <h2>Feels-like</h2>
+                <img src="../Images/high-temperature.png" alt="Feels like image" height="100px">
+                <h2><%= feelsLike %>°C</h2>
+                <p>Visibility: <%= Visibility %>km</p>
+            </div>
+
+            <div class="humidity w-50 gradient-background display-box text-center">
+                <h2>Humidity</h2>
+                <img src="../Images/humidity.png" alt="humidity image" height="100px">
+                <h2><%= Humidity %>kg/m³</h2>
+            </div>        
+        </div>
+    </div>
+    <footer class="text-center">
+        <p>Copyright @Akshat Jain <%= new Date().getFullYear() %></p>
+    </footer>
+</body>
+</html>

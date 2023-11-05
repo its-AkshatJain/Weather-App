@@ -1,0 +1,171 @@
+body{
+    background-color: black;
+    /* #000033 */
+    color:white;
+    font-family: 'Lora', serif;
+}
+
+h2,h3{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+}
+
+h2{
+    font-size:2rem;
+}
+
+.gradient-background{
+    background: linear-gradient(300deg,#abaed3,#24142c,#9e616b);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.top-searchbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5rem 2.5rem;
+}
+
+.top-heading{
+    font-family: 'Black Ops One', sans-serif;
+}
+
+.search{
+    display:flex;
+    align-items: center;
+}
+
+.search-box{
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.search-button{
+    padding: 0.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    background-color: #1c1c1c;
+    color:white;
+    border:1px solid white;
+    margin-left:10px;
+}
+.search-button:hover{
+    background-color: #4a4a4a;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: 1fr 1fr; */
+}
+
+.display-box{
+    margin:1rem;
+    padding:1rem 2rem 1rem 2rem;
+    border-radius: 25px;
+}
+
+.time{
+    text-align: right;
+}
+
+.weather-image{
+    border-radius: 10px;
+}
+
+.temperature{
+    /* margin:10px;
+    border:1px solid black; */
+}
+
+/* .wind, .uv-index, .bottom-right, .feels-like, .humidity{
+    margin:10px;
+    border:1px solid black;
+    width:50%;
+} */
+
+.top-right{
+    display: flex;
+}
+
+/* .uv-index{
+    margin:10px;
+    border:1px solid black;
+} */
+
+.bottom-right{
+    display: flex;
+}
+
+/* .feels-like{
+    margin:10px;
+    border:1px solid black;
+} */
+
+/* .humidity{
+    margin:10px;
+    border:1px solid black;
+} */
+
+.additional-info{
+    /* margin:10px;
+    border:1px solid black; */
+}
+
+/* footer{
+    text-align:center;
+} */
+
+.w-50{
+    width:50%;
+}
+
+.text-center{
+    text-align:center;
+}
+
+@media screen and (max-width:860px) {
+    .container{
+        display: block;
+    }
+}
+
+@media screen and (max-width:685px) {
+    .top-searchbar{
+        display: block;
+        text-align: center;
+        /* margin:auto; */
+    }
+    .search{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .container{
+        text-align: center;
+    }
+    /* .display-box{
+        margin: 0.2rem;
+    }  */
+    .bottom-right, .top-right{
+        display: block;
+    }
+    .w-50{
+        width:auto;
+    }
+}
