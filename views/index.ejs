@@ -1,21 +1,21 @@
-<!-- Will make it using react 
-will enable dark and light theme
-use grid and flex for styling -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../styles/styles.css">
 
+    <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kanit:wght@500&family=Lora&display=swap" rel="stylesheet">
 
 </head>
 <body class="">
-    
+    <!-- Top Heading and Searchbar -->
     <div class="top-searchbar">
         <h1 class="top-heading"><img src="../Images/cloudy.png" alt="Weather App icon" height="30px"> Weather App</h1>
         <form class="search" action="/submit" method="POST">
@@ -54,8 +54,9 @@ use grid and flex for styling -->
         </form>
     </div>
 
-
     <div class="container">
+
+        <!-- Temperature -->
         <div class="temperature gradient-background display-box">
             <img class="weather-image" src="<%= imageURL %>" alt="weather-image">
 
@@ -77,28 +78,16 @@ use grid and flex for styling -->
             </div>
         </div>
 
-        <!-- Not available on free API plan -->
-        <!-- <div class="past-seven-days">
-            <h2>Past 7-Days</h2>
-            <div>Date-1</div>
-            <div>Date-2</div>
-            <div>Date-3</div>
-            <div>Date-4</div>
-            <div>Date-5</div>
-            <div>Date-6</div>
-            <div>Date-7</div>
-        </div> -->
         <div class="top-right">
+            <!-- Wind-Status -->
             <div class="wind w-50 gradient-background display-box text-center">
                 <h2>Wind-Status</h2>
                 <img src="../Images/wind.png" alt="wind image" height="100px">
                 <h2><%= windSpeed %>km/h</h2>
                 <p><%= windDegree %>° <%= windDirection %> pole</p>
-                <!-- <div class="time">
-                    <p> observationTime %></p>
-                </div> -->
             </div>
-    
+
+            <!-- UV Index -->
             <div class="uv-index w-50 gradient-background display-box text-center">
                 <h2>UV Index</h2>
                 <img src="../Images/uv-index.png" alt="UV-Index" height="100px">
@@ -106,6 +95,7 @@ use grid and flex for styling -->
             </div>
         </div>
         
+        <!-- Other Highlights -->
         <div class="additional-info gradient-background display-box">
             <h2>Other Highlights</h2>
             <div>
@@ -123,6 +113,7 @@ use grid and flex for styling -->
         </div>
 
         <div class="bottom-right">
+            <!-- Feels-like -->
             <div class="feels-like w-50 gradient-background display-box text-center">
                 <h2>Feels-like</h2>
                 <img src="../Images/high-temperature.png" alt="Feels like image" height="100px">
@@ -130,6 +121,7 @@ use grid and flex for styling -->
                 <p>Visibility: <%= Visibility %>km</p>
             </div>
 
+            <!-- Humidity -->
             <div class="humidity w-50 gradient-background display-box text-center">
                 <h2>Humidity</h2>
                 <img src="../Images/humidity.png" alt="humidity image" height="100px">
@@ -137,6 +129,7 @@ use grid and flex for styling -->
             </div>        
         </div>
     </div>
+    
     <footer class="text-center">
         <p>Copyright @Akshat Jain <%= new Date().getFullYear() %></p>
     </footer>

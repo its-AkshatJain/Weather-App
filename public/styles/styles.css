@@ -1,6 +1,5 @@
 body{
     background-color: black;
-    /* #000033 */
     color:white;
     font-family: 'Lora', serif;
 }
@@ -32,6 +31,7 @@ h2{
     }
   }
 
+  /* Search Bar */
 .top-searchbar{
     display:flex;
     justify-content: space-between;
@@ -63,14 +63,15 @@ h2{
     border:1px solid white;
     margin-left:10px;
 }
+
 .search-button:hover{
     background-color: #4a4a4a;
 }
 
+/* Container boxes */
 .container{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    /* grid-template-rows: 1fr 1fr; */
 }
 
 .display-box{
@@ -87,49 +88,15 @@ h2{
     border-radius: 10px;
 }
 
-.temperature{
-    /* margin:10px;
-    border:1px solid black; */
-}
-
-/* .wind, .uv-index, .bottom-right, .feels-like, .humidity{
-    margin:10px;
-    border:1px solid black;
-    width:50%;
-} */
-
 .top-right{
     display: flex;
 }
-
-/* .uv-index{
-    margin:10px;
-    border:1px solid black;
-} */
 
 .bottom-right{
     display: flex;
 }
 
-/* .feels-like{
-    margin:10px;
-    border:1px solid black;
-} */
-
-/* .humidity{
-    margin:10px;
-    border:1px solid black;
-} */
-
-.additional-info{
-    /* margin:10px;
-    border:1px solid black; */
-}
-
-/* footer{
-    text-align:center;
-} */
-
+/* CSS properties which are applied on various div */
 .w-50{
     width:50%;
 }
@@ -138,6 +105,7 @@ h2{
     text-align:center;
 }
 
+/* For a responsive website */
 @media screen and (max-width:860px) {
     .container{
         display: block;
@@ -159,9 +127,7 @@ h2{
     .container{
         text-align: center;
     }
-    /* .display-box{
-        margin: 0.2rem;
-    }  */
+
     .bottom-right, .top-right{
         display: block;
     }

@@ -59,30 +59,6 @@ app.get("/",async (req,res)=>{
     }
 })
 
-// For historic Days
-// const date = new Date;
-// date.toLocaleDateString(date.setDate(date.getDate() - 3))
-// date.toLocaleDateString(date.setDate(date.getDate() + 4))
-
-// for Forcast dys
-// app.get("/",async (req,res)=>{
-//         try{
-//             const response = await axios.get(API_URL + "/forecast", {
-//                 params:{
-//                     access_key: apiKey,
-//                     query: "Madhya Pradesh",
-//                     forecast_days: 1,
-//                     hourly: 1,
-//                 }})
-//                 console.log("response is---" + response.data);
-//                 res.render("index.ejs");
-//             }
-//         catch(error){
-//             console.log(error);
-//             res.send(error);
-//         }
-//     })
-
 app.post("/submit",async (req,res)=>{
     // console.log(req.body.area);
     try{
