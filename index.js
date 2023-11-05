@@ -8,7 +8,7 @@ dotenv.config();
 // console.log(process.env);
 
 const app = express();
-const port=3000;
+const port= process.env.PORT || 3000;
 const API_URL = "http://api.weatherstack.com";
 const apiKey = process.env.API_KEY;
 
